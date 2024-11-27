@@ -1,122 +1,209 @@
-/* General Styles */
-* {
+/* Global Styling */
+body {
+    font-family: 'Pacifico', cursive; /* Script font for the page */
+    background-image: url('wp2711114.gif'); /* Your GIF background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the GIF fixed while scrolling */
+    color: white;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    line-height: 1.6;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+/* About Section - Applied directly */
+#about {
+    background-color: rgba(0, 0, 0, 0.3); /* Transparent background */
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+/* About Text Pop Effect */
+.about-text {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for pop effect */
+    padding: 10px;
 }
 
-h1, h2, h3 {
-    color: #333;
+/* Pop effect on hover */
+.about-text:hover {
+    transform: scale(1.1) rotate(5deg); /* Scale up and rotate slightly */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8); /* Enhance the shadow */
 }
 
-a {
+/* Header Section */
+header {
+    text-align: center;
+    padding: 40px 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header text */
+header h1 {
+    font-size: 3rem;
+    color: #FF6347; /* Coral color for name */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow for visibility */
+}
+
+header p {
+    font-size: 1.5rem;
+    color: #FF6347;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Navigation Bar (Horizontal in the center) */
+nav {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display the items in a row */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between links */
+}
+
+nav ul li a {
+    color: #FF6347;
     text-decoration: none;
-    color: #007BFF;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Subtle shadow for better visibility */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Change color on hover */
+    text-decoration: underline;
+}
+
+/* Section Styling (Unchanged Background for Clarity) */
+.section {
+    padding: 60px 0;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Semi-transparent background to allow the GIF to show through */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Light dark background */
+    z-index: 1; /* Overlay behind content */
+}
+
+/* Content inside each section */
+.container {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+/* Section headings */
+h2 {
+    font-size: 2.5rem;
+    color: #FF6347;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* About Section Styling */
+#about {
+    background-color: rgba(0, 0, 0, 0.3); /* Transparent black background */
+}
+
+/* Projects Section Styling */
+#projects {
+    background-color: rgba(0, 0, 0, 0.3); /* Light dark background */
+}
+
+/* Contact Section Styling */
+#contact {
+    background-color: rgba(0, 0, 0, 0.3); /* Light dark background */
+}
+
+/* Project Cards Styling */
+.project-card {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent card background */
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for the pop effect */
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover effect for project cards - pop bubble effect */
+.project-card:hover {
+    transform: scale(1.1) rotate(5deg); /* Scale up the card and rotate slightly */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8); /* Enhanced shadow on hover */
+}
+
+/* Project Card Images */
+.project-card img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Project Card Titles and Links */
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #FF6347;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: white;
+}
+
+.project-card a {
+    color: #FF6347;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark footer background */
+    text-align: center;
+    padding: 20px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Link Styling */
+a {
+    color: #FF6347;
+    text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-}
-
-/* Header Styles */
-header {
-    background-color: #333;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.5em;
-    font-weight: 300;
-}
-
-/* Section Styles */
-.section {
-    padding: 40px 0;
-    background-color: white;
-    margin-bottom: 20px;
-}
-
-.section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.section ul {
-    list-style-type: none;
-}
-
-.section ul li {
-    margin-bottom: 20px;
-}
-
-.section ul li h3 {
-    font-size: 1.5em;
-}
-
-.section ul li a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.section ul li a:hover {
-    background-color: #0056b3;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-footer p {
-    font-size: 1em;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5em;
-    }
-
-    header p {
-        font-size: 1.2em;
-    }
-
-    .section {
-        padding: 20px 0;
-    }
-
-    .section h2 {
-        font-size: 1.8em;
-    }
-
-    .section ul li h3 {
-        font-size: 1.2em;
-    }
 }
